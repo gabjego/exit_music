@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exit Music - Premium EPK</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ok-blue: #2d4a5e;
+            --kid-red: #cc2b2b;
+            --bg: #030303;
+        }
+        body {
+            background-color: var(--bg);
+            color: #f0f0f0;
+            font-family: 'Outfit', sans-serif;
+            scroll-behavior: smooth;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 10q15 0 15 15t15 15M80 20q-10 10-10 30t20 20M30 80c20-10 30 10 50 0' stroke='%23ffffff05' fill='none' stroke-width='0.5'/%3E%3C/svg%3E");
+        }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        
+        .kid-a-peaks {
+            clip-path: polygon(0% 100%, 10% 20%, 20% 80%, 30% 10%, 45% 90%, 60% 30%, 75% 85%, 90% 15%, 100% 100%);
+            background: linear-gradient(to bottom, var(--ok-blue), transparent);
+            height: 220px;
+            margin-top: -110px;
+            opacity: 0.15;
+            filter: contrast(180%);
+        }
+
+        .lyric-heavy {
+            position: absolute;
+            font-family: 'JetBrains Mono';
+            font-weight: 900;
+            text-transform: uppercase;
+            pointer-events: none;
+            white-space: nowrap;
+            z-index: 0;
+            line-height: 0.9;
+        }
+        .text-outline {
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.12);
+            color: transparent;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.01);
+            backdrop-filter: blur(30px);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .glass:hover {
+            background: rgba(45, 74, 94, 0.1);
+            border-color: var(--ok-blue);
+            transform: scale(1.02);
+        }
+
+        .glitch-premium {
+            position: relative;
+            display: inline-block;
+            transition: all 0.4s ease;
+        }
+        .glitch-premium:hover {
+            text-shadow: 4px 0 var(--kid-red), -4px 0 var(--ok-blue);
+        }
+
+        .tech-data {
+            font-family: 'JetBrains Mono';
+            font-size: 8px;
+            color: rgba(255,255,255,0.1);
+            position: absolute;
+            letter-spacing: 0.3em;
+        }
+
+        .scanline {
+            width: 100%;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.03);
+            position: absolute;
+            animation: scan 8s linear infinite;
+        }
+        @keyframes scan {
+            from { top: 0; }
+            to { top: 100%; }
+        }
+
+        /* Utilidad para simular códigos de barras */
+        .barcode-line { background-color: rgba(255,255,255,0.2); height: 100%; }
+    </style>
+</head>
+<body class="antialiased selection:bg-[#cc2b2b] selection:text-white overflow-x-hidden">
+
+    <div class="scanline"></div>
+
+    <!-- CAPA DE CAOS AUMENTADA -->
+    <div class="lyric-heavy text-outline text-[18rem] -top-24 -left-20 rotate-[-8deg]">NO DATA</div>
+    <div class="lyric-heavy text-[12rem] top-[15%] -right-40 rotate-90 opacity-[0.03]">I'M NOT HERE</div>
+    <div class="lyric-heavy text-outline text-[10rem] top-[35%] -left-32 rotate-12 opacity-[0.05]">GOD LOVES HIS CHILDREN</div>
+    <div class="lyric-heavy text-[#cc2b2b] text-[20rem] top-[50%] -right-80 opacity-[0.02] rotate-[-15deg]">2+2=5</div>
+    <div class="lyric-heavy text-outline text-[12rem] bottom-[20%] -left-40 rotate-[-5deg]">GROW WINGS</div>
+    <div class="lyric-heavy text-white/5 text-[8rem] bottom-0 right-10 rotate-3">STAY SAFE</div>
+
+    <div class="tech-data top-10 left-10">LOG_ID: [EXIT_098]</div>
+    <div class="tech-data top-1/2 right-10 rotate-90">BUFFER_OVERFLOW: [RE_SYNC_REQUIRED]</div>
+    <div class="tech-data bottom-10 left-1/2 -translate-x-1/2">LAT: 20.6719 | LONG: -103.3500</div>
+
+    <!-- Header / Hero -->
+    <header class="relative h-screen flex flex-col items-center justify-center px-6 overflow-hidden border-b border-white/5">
+        <div class="lyric-heavy text-5xl top-32 right-10 rotate-6 text-[#2d4a5e]/40 tracking-tighter">DON'T GET ANY BIG IDEAS</div>
+        <div class="lyric-heavy text-outline text-7xl bottom-40 left-10 -rotate-2">IMMERSE YOUR SOUL IN LOVE</div>
+        
+        <div class="absolute inset-0 z-0 opacity-15 grayscale contrast-150">
+            <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover scale-110" alt="Live Concert Backdrop">
+        </div>
+        
+        <div class="absolute inset-0 z-10 bg-gradient-to-t from-[#030303] via-[#030303]/60 to-[#2d4a5e]/30"></div>
+
+        <div class="relative z-20 text-center space-y-10 max-w-6xl">
+            <div class="inline-block px-10 py-2 border border-white/10 rounded-sm mb-6 bg-white/5 backdrop-blur-xl">
+                <span class="mono text-[10px] uppercase tracking-[0.8em] text-white font-black italic">Guadalajara • Live Art Performance • Re-Sync 2026</span>
+            </div>
+            
+            <h1 class="text-8xl md:text-[12rem] font-black uppercase tracking-tighter glitch-premium leading-[0.7] drop-shadow-2xl" data-text="EXIT MUSIC">
+                EXIT MUSIC
+            </h1>
+            <p class="text-xl md:text-4xl font-light text-white/30 tracking-[0.5em] uppercase pt-6">
+                The Radiohead Experience
+            </p>
+            
+            <div class="flex flex-col md:flex-row items-center justify-center gap-10 pt-24">
+                <a href="#repertoire" class="group relative px-20 py-7 bg-white text-black font-black uppercase tracking-[0.3em] text-xs transition-all duration-500 hover:bg-[#cc2b2b] hover:text-white">
+                    Ver Repertorio
+                    <div class="absolute -bottom-2 -right-2 w-full h-full border border-white/20 -z-10 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform"></div>
+                </a>
+                <a href="#booking" class="px-20 py-7 border border-white/10 font-black uppercase tracking-[0.3em] text-xs hover:border-[#2d4a5e] hover:bg-[#2d4a5e]/5 transition-all">Contrataciones</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="kid-a-peaks"></div>
+
+    <main class="max-w-7xl mx-auto px-6 pb-40 space-y-24 relative">
+        
+        <!-- Sección: Pilares Profesionales -->
+        <section id="details" class="grid md:grid-cols-3 gap-10 relative z-10">
+            <div class="glass p-16 rounded-sm border-t-8 border-t-[#2d4a5e] space-y-8 group relative overflow-hidden">
+                <div class="absolute -right-4 -top-4 text-white/5 font-black text-6xl rotate-12">BNDS</div>
+                <h4 class="text-[10px] mono text-[#2d4a5e] uppercase tracking-[0.4em] font-black">SYSTEM.01</h4>
+                <h3 class="text-4xl font-black uppercase tracking-tighter group-hover:text-[#2d4a5e] transition">Full Album Sets</h3>
+                <p class="text-white/40 text-base leading-relaxed font-light italic">
+                    Experiencia conceptual íntegra. Interpretación completa de álbumes icónicos de principio a fin. Especial 2026: **The Bends (30th Anniversary Tour)** y **OK Computer**.
+                </p>
+            </div>
+            <div class="glass p-16 rounded-sm border-t-8 border-t-[#cc2b2b] space-y-8 group relative overflow-hidden">
+                <div class="absolute -right-4 -top-4 text-white/5 font-black text-6xl rotate-12">KID_A</div>
+                <h4 class="text-[10px] mono text-[#cc2b2b] uppercase tracking-[0.4em] font-black">SYSTEM.02</h4>
+                <h3 class="text-4xl font-black uppercase tracking-tighter group-hover:text-[#cc2b2b] transition">Atmósferas</h3>
+                <p class="text-white/40 text-base leading-relaxed font-light">
+                    Inmersión total: desde el impacto **Full Electric** de estadio hasta la sofisticación de sesiones **Electronic & Acoustic Lounge**.
+                </p>
+            </div>
+            <div class="glass p-16 rounded-sm border-t-8 border-t-white space-y-8 group relative overflow-hidden">
+                <div class="absolute -right-4 -top-4 text-white/5 font-black text-6xl rotate-12">GLBL</div>
+                <h4 class="text-[10px] mono text-white/60 uppercase tracking-[0.4em] font-black">SYSTEM.03</h4>
+                <h3 class="text-4xl font-black uppercase tracking-tighter group-hover:text-white transition">Conectividad</h3>
+                <p class="text-white/40 text-base leading-relaxed font-light">
+                    Música sin fronteras. Un producto de exportación sonora diseñado para audiencias internacionales, festivales y destinos de autor.
+                </p>
+            </div>
+        </section>
+
+        <!-- SEPARADOR GRÁFICO -->
+        <div class="w-full h-24 border-y border-white/10 flex items-center justify-between px-4 relative overflow-hidden bg-white/[0.02]">
+            <div class="lyric-heavy text-6xl text-white/5 absolute left-1/2 -translate-x-1/2">HOW TO DISAPPEAR COMPLETELY</div>
+            <div class="flex h-12 gap-1 items-end z-10">
+                <div class="barcode-line w-1"></div><div class="barcode-line w-3"></div><div class="barcode-line w-px"></div><div class="barcode-line w-4"></div>
+                <div class="barcode-line w-2"></div><div class="barcode-line w-1"></div><div class="barcode-line w-5"></div><div class="barcode-line w-px"></div>
+                <div class="barcode-line w-2"></div><div class="barcode-line w-4"></div><div class="barcode-line w-1"></div><div class="barcode-line w-3"></div>
+            </div>
+            <div class="mono text-[10px] text-[#2d4a5e] tracking-[0.5em] font-bold z-10 bg-[#030303] px-2">
+                SCAN_RES: [AUDIO_VISUAL_SYNC]
+            </div>
+            <div class="flex h-12 gap-1 items-end z-10">
+                <div class="barcode-line w-3"></div><div class="barcode-line w-1"></div><div class="barcode-line w-4"></div><div class="barcode-line w-px"></div>
+                <div class="barcode-line w-5"></div><div class="barcode-line w-1"></div><div class="barcode-line w-2"></div><div class="barcode-line w-4"></div>
+                <div class="barcode-line w-px"></div><div class="barcode-line w-3"></div><div class="barcode-line w-1"></div><div class="barcode-line w-2"></div>
+            </div>
+        </div>
+
+        <!-- Sección: Visión y Repertorio -->
+        <section id="repertoire" class="grid md:grid-cols-2 gap-20 md:gap-40 relative pt-10">
+            <!-- Texto de fondo lateral -->
+            <div class="lyric-heavy text-[15rem] -left-80 top-1/2 -rotate-90 opacity-[0.02] text-white">SYSTEM_FAILURE</div>
+            
+            <div class="space-y-14">
+                <div class="text-[11px] mono text-[#cc2b2b] font-black tracking-[0.6em] bg-[#cc2b2b]/10 px-6 py-2 inline-block">CORE_CONCEPT_RE-SYNC</div>
+                <h3 class="text-7xl font-black uppercase tracking-tighter leading-[0.9]">La Visión Sonora <span class="text-[#cc2b2b] animate-pulse">|</span></h3>
+                <p class="text-white/40 text-2xl leading-relaxed font-light">
+                    Exit Music no es solo un tributo; es un proyecto de reconstrucción sonora. Utilizamos tecnología de vanguardia para capturar la esencia de Radiohead, fluyendo entre la distorsión analógica y el minimalismo digital de la era Kid A.
+                </p>
+                <div class="grid grid-cols-2 gap-12 pt-12">
+                    <div class="border-l-4 border-[#2d4a5e] pl-8">
+                        <p class="text-7xl font-black text-[#2d4a5e]">120</p>
+                        <p class="text-[11px] mono uppercase text-white/30 tracking-widest font-black">Minutes_Max</p>
+                    </div>
+                    <div class="border-l-4 border-[#cc2b2b] pl-8">
+                        <p class="text-7xl font-black text-[#cc2b2b]">FULL</p>
+                        <p class="text-[11px] mono uppercase text-white/30 tracking-widest font-black">AV_Experience</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="relative">
+                <div class="lyric-heavy text-[14rem] -top-20 right-[-15%] text-[#cc2b2b] opacity-[0.06] font-black">2+2=5</div>
+                
+                <div class="glass p-12 md:p-16 rounded-sm border border-white/10 relative shadow-2xl">
+                    <div class="absolute top-0 right-0 p-6 mono text-[10px] text-white/20 font-bold uppercase tracking-tighter bg-white/5">DATA_INDEX: [SONIC_PROFILES]</div>
+                    <h4 class="text-xs mono text-[#2d4a5e] uppercase mb-12 tracking-[0.6em] font-black mt-4">Perfiles Sonoros</h4>
+                    
+                    <div class="space-y-10">
+                        <!-- Perfil 1 -->
+                        <div class="group relative pl-6 border-l-2 border-white/10 hover:border-[#2d4a5e] transition-colors">
+                            <div class="absolute -left-[9px] top-1 w-4 h-4 bg-[#030303] border-2 border-white/10 rounded-full group-hover:border-[#2d4a5e] transition-colors"></div>
+                            <p class="mono text-[10px] text-[#2d4a5e] uppercase tracking-[0.4em] font-black mb-2">CAT.01 // THE ANTHEMS</p>
+                            <p class="text-white/90 font-bold text-lg leading-snug tracking-tight">Karma Police • Creep • High and Dry • Fake Plastic Trees</p>
+                            <p class="text-white/40 text-sm mt-2 font-light italic">Himnos de estadio alt-rock. Alta conexión e interacción con la audiencia masiva.</p>
+                        </div>
+
+                        <!-- Perfil 2 -->
+                        <div class="group relative pl-6 border-l-2 border-white/10 hover:border-[#cc2b2b] transition-colors">
+                            <div class="absolute -left-[9px] top-1 w-4 h-4 bg-[#030303] border-2 border-white/10 rounded-full group-hover:border-[#cc2b2b] transition-colors"></div>
+                            <p class="mono text-[10px] text-[#cc2b2b] uppercase tracking-[0.4em] font-black mb-2">CAT.02 // THE ATMOSPHERE</p>
+                            <p class="text-white/90 font-bold text-lg leading-snug tracking-tight">Nude • Paranoid Android • Weird Fishes</p>
+                            <p class="text-white/40 text-sm mt-2 font-light italic">Paisajes sonoros complejos y construcciones progresivas. Ideal para foros especializados.</p>
+                        </div>
+
+                        <!-- Perfil 3 -->
+                        <div class="group relative pl-6 border-l-2 border-white/10 hover:border-white transition-colors">
+                            <div class="absolute -left-[9px] top-1 w-4 h-4 bg-[#030303] border-2 border-white/10 rounded-full group-hover:border-white transition-colors"></div>
+                            <p class="mono text-[10px] text-white/50 uppercase tracking-[0.4em] font-black mb-2">CAT.03 // THE EXPERIMENTAL</p>
+                            <p class="text-white/90 font-bold text-lg leading-snug tracking-tight">How to Disappear Completely • The National Anthem • Exit Music</p>
+                            <p class="text-white/40 text-sm mt-2 font-light italic">Electrónica en vivo, sintetizadores y ritmos fracturados. Para ambientes lounge y vanguardia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEPARADOR GRÁFICO 2 -->
+        <div class="w-full h-12 border-t border-white/10 flex items-center justify-center relative overflow-hidden bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgMGwyMCAyME0yMCAwbC0yMCAyMCIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMDUpIiBmaWxsPSJub25lIi8+PC9zdmc+')]">
+            <div class="bg-[#030303] px-6 py-1 mono text-[9px] text-white/30 tracking-[1em] uppercase border border-white/10">CONNECTION_SECURED</div>
+        </div>
+
+        <!-- Sección: Historial de Venues (Zonas de Ejecución) -->
+        <section id="venues" class="relative pt-10">
+            <div class="lyric-heavy text-[12rem] -right-40 top-0 rotate-[5deg] opacity-[0.03] text-white">LIVE_SCENE</div>
+            
+            <div class="max-w-6xl mx-auto relative z-10">
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-10 mb-16">
+                    <div class="space-y-4">
+                        <p class="text-[11px] mono text-[#2d4a5e] uppercase tracking-[0.6em] font-black">LOG_REGISTRY: [SCENE_EXPERIENCE]</p>
+                        <h3 class="text-6xl md:text-7xl font-black uppercase tracking-tighter">Experiencia en<br>la Escena <span class="text-white/20 animate-pulse">_</span></h3>
+                    </div>
+                    <p class="text-white/40 max-w-md text-lg font-light leading-relaxed border-l-4 border-[#cc2b2b] pl-6 pb-2">
+                        A lo largo de nuestra trayectoria, hemos trabajado en múltiples ocasiones con los recintos más representativos e icónicos de la escena musical en Guadalajara, consolidando la calidad de nuestro show en vivo.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                    <!-- Venue 1 -->
+                    <div class="glass p-8 border-b-4 border-b-white/10 hover:border-b-[#2d4a5e] transition-all group cursor-crosshair shadow-[0_0_30px_rgba(0,0,0,0.5)]">
+                        <p class="text-[10px] mono text-white/20 uppercase tracking-widest mb-4">STATUS: VERIFIED</p>
+                        <p class="text-xl md:text-2xl font-black uppercase tracking-tight group-hover:text-[#2d4a5e] transition-colors">PORTER</p>
+                        <p class="text-[10px] mono text-white/40 mt-2">GUADALAJARA, JAL</p>
+                    </div>
+                    <!-- Venue 2 -->
+                    <div class="glass p-8 border-b-4 border-b-white/10 hover:border-b-[#cc2b2b] transition-all group cursor-crosshair shadow-[0_0_30px_rgba(0,0,0,0.5)]">
+                        <p class="text-[10px] mono text-white/20 uppercase tracking-widest mb-4">STATUS: VERIFIED</p>
+                        <p class="text-xl md:text-2xl font-black uppercase tracking-tight group-hover:text-[#cc2b2b] transition-colors">ROCK IT</p>
+                        <p class="text-[10px] mono text-white/40 mt-2">GUADALAJARA, JAL</p>
+                    </div>
+                    <!-- Venue 3 -->
+                    <div class="glass p-8 border-b-4 border-b-white/10 hover:border-b-white/50 transition-all group cursor-crosshair shadow-[0_0_30px_rgba(0,0,0,0.5)]">
+                        <p class="text-[10px] mono text-white/20 uppercase tracking-widest mb-4">STATUS: VERIFIED</p>
+                        <p class="text-xl md:text-2xl font-black uppercase tracking-tight group-hover:text-white transition-colors">MCCARTHY'S</p>
+                        <p class="text-[10px] mono text-white/40 mt-2">ZAPOPAN, JAL</p>
+                    </div>
+                    <!-- Venue 4 -->
+                    <div class="glass p-8 border-b-4 border-b-white/10 hover:border-b-[#2d4a5e] transition-all group cursor-crosshair shadow-[0_0_30px_rgba(0,0,0,0.5)]">
+                        <p class="text-[10px] mono text-white/20 uppercase tracking-widest mb-4">STATUS: VERIFIED</p>
+                        <p class="text-xl md:text-2xl font-black uppercase tracking-tight group-hover:text-[#2d4a5e] transition-colors">HUDSON</p>
+                        <p class="text-[10px] mono text-white/40 mt-2">GUADALAJARA, JAL</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección: Especificaciones Técnicas (Rider) -->
+        <section id="tech-rider" class="relative pt-24">
+            <div class="lyric-heavy text-[12rem] -left-20 top-20 rotate-90 opacity-[0.02] text-white">SYS_REQ</div>
+            
+            <div class="glass p-16 md:p-20 rounded-sm border-l-8 border-l-[#2d4a5e] relative overflow-hidden shadow-[0_0_50px_rgba(45,74,94,0.05)]">
+                <div class="absolute top-0 right-0 p-8 mono text-[10px] text-[#2d4a5e] font-bold uppercase tracking-[0.5em]">DIAGNOSTIC_RUN: [TECH_RIDER]</div>
+                
+                <div class="mb-16 space-y-4">
+                    <h3 class="text-6xl font-black uppercase tracking-tighter">Especificaciones <span class="text-[#2d4a5e] animate-pulse">_</span></h3>
+                    <p class="text-white/40 mono text-[11px] mt-2 uppercase tracking-[0.6em] font-black">Requerimientos de Audio y Stage</p>
+                </div>
+                
+                <!-- 3 Bloques de Resumen Técnico -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 mb-16">
+                    <div class="space-y-4 border-b-2 border-[#2d4a5e] pb-8 group">
+                        <p class="text-[11px] mono text-[#2d4a5e] uppercase tracking-[0.4em] font-black group-hover:text-white transition">Snake_Req</p>
+                        <p class="text-5xl font-black uppercase tracking-tighter">15 Ch</p>
+                        <p class="text-[10px] mono text-white/30 uppercase italic">A Consola Principal</p>
+                    </div>
+                    <div class="space-y-4 border-b-2 border-white/10 pb-8 group">
+                        <p class="text-[11px] mono text-white/40 uppercase tracking-[0.4em] font-black group-hover:text-white transition">Backline</p>
+                        <p class="text-5xl font-black uppercase tracking-tighter">Mic'd</p>
+                        <p class="text-[10px] mono text-white/30 uppercase italic">Amps Microfoneados</p>
+                    </div>
+                    <div class="space-y-4 border-b-2 border-[#cc2b2b] pb-8 group">
+                        <p class="text-[11px] mono text-[#cc2b2b] uppercase tracking-[0.4em] font-black group-hover:text-white transition">Power_AC</p>
+                        <p class="text-5xl font-black uppercase tracking-tighter">Access</p>
+                        <p class="text-[10px] mono text-white/30 uppercase italic">Requisito Vital</p>
+                    </div>
+                </div>
+
+                <!-- Lista de Canales Estilo Consola -->
+                <div class="border border-white/10 bg-[#030303]/80 p-10 rounded-sm font-mono text-sm text-white/60 mb-10">
+                    <p class="text-[#2d4a5e] font-bold mb-8 tracking-[0.2em] uppercase text-xs">SYS_INDEX: [CHANNEL_ROUTING_LIST]</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-x-16 gap-y-4">
+                        <div class="flex justify-between border-b border-white/5 pb-2"><span class="text-[#2d4a5e]">CH.01</span><span class="text-white/90">Bombo</span></div>
+                        <div class="flex justify-between border-b border-white/5 pb-2"><span class="text-[#2d4a5e]">CH.02</span><span class="text-white/90">Tarola</span></div>
+                        <div class="flex justify-between border-b border-white/5 pb-2"><span class="text-[#2d4a5e]">CH.03</span><span class="text-white/90">Tom 1</span></div>
+                        <div class="flex justify-between border-b border-white/5 pb-2"><span class="text-[#2d4a5e]">CH.04</span><span class="text-white/90">Tom 2</span></div>
+                        <div class="flex justify-between border-b border-white/5 pb-2"><span class="text-[#2d4a5e]">CH.05</span><span class="text-white/90">Over 1</span></div>
+                        <div class="flex justify-between border-b border-white/5 pb-2"><span class="text-[#2d4a5e]">CH.06</span><span class="text-white/90">Over 2</span></div>
+                        <div class="flex justify-between border-b border-white/5 pb-2"><span class="text-[#2d4a5e]">CH.07</span><span class="text-white/90">Bajo</span></div>
+                        <div class="flex justify-between border-b border-white/5 pb-2"><span class="text-[#2d4a5e]">CH.08</span><span class="text-white/90">1era Guitarra</span></div>
+                        <div class="flex justify-between border-b border-white/5 pb-2"><span class="text-[#2d4a5e]">CH.09</span><span class="text-white/90">2nda Guitarra</span></div>
+                        <div class="flex justify-between border-b border-white/5 pb-2"><span class="text-[#2d4a5e]">CH.10</span><span class="text-white/90">3era Guitarra</span></div>
+                        <div class="flex justify-between border-b border-white/5 pb-2"><span class="text-[#2d4a5e]">CH.11</span><span class="text-white/90">Synth (Línea)</span></div>
+                        <div class="flex justify-between border-b border-white/5 pb-2"><span class="text-[#2d4a5e]">CH.12</span><span class="text-white/90">Keyboard (Línea)</span></div>
+                        <div class="flex justify-between border-b border-white/5 pb-2"><span class="text-[#2d4a5e]">CH.13</span><span class="text-white/90">Glockenspiel (Mic)</span></div>
+                        <div class="flex justify-between border-b border-white/5 pb-2"><span class="text-[#cc2b2b]">CH.14</span><span class="text-white/90 font-bold">Voz Principal</span></div>
+                        <div class="flex justify-between border-b border-white/5 pb-2"><span class="text-[#2d4a5e]">CH.15</span><span class="text-white/90">Voz Secundaria</span></div>
+                    </div>
+                </div>
+
+                <!-- Advertencia Eléctrica -->
+                <div class="bg-[#cc2b2b]/10 border border-[#cc2b2b]/30 p-8 rounded-sm relative overflow-hidden">
+                    <div class="absolute -right-4 -top-8 text-[#cc2b2b]/5 font-black text-8xl pointer-events-none">PWR</div>
+                    <p class="text-[#cc2b2b] mono text-[12px] uppercase tracking-widest font-bold mb-3 flex items-center">
+                        <svg class="w-5 h-5 mr-3 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        CRITICAL_WARNING: POWER_SUPPLY
+                    </p>
+                    <p class="text-white/70 text-base md:text-lg font-light leading-relaxed">
+                        Se requiere <span class="text-white font-bold">alimentación eléctrica accesible e independiente</span> a lo largo del escenario para <strong>4 amplificadores</strong> y <strong>4 pedalboards de efectos</strong> correspondientes a cada miembro de la banda (exceptuando al baterista). Indispensable para evitar loops de tierra.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Booking Section -->
+        <section id="booking" class="relative pt-20">
+            <div class="lyric-heavy text-outline text-[16rem] -top-60 -right-20 rotate-[-12deg] opacity-[0.08]">GROW WINGS</div>
+            
+            <div class="bg-gradient-to-br from-[#cc2b2b]/15 to-transparent p-24 md:p-32 rounded-[80px] border border-white/5 text-center space-y-24 relative overflow-hidden backdrop-blur-3xl shadow-[0_0_100px_rgba(204,43,43,0.05)]">
+                <!-- Fragmentos de lírica flotantes dentro del booking -->
+                <div class="lyric-heavy text-2xl top-10 left-20 opacity-20 rotate-12">I'M NOT HERE</div>
+                <div class="lyric-heavy text-2xl bottom-10 right-20 opacity-20 -rotate-12 italic">STAY SAFE</div>
+
+                <div class="space-y-8">
+                    <h3 class="text-8xl md:text-9xl font-black italic tracking-tighter uppercase leading-none text-white shadow-text">CONTACTO</h3>
+                    <p class="text-white/40 max-w-4xl mx-auto font-light text-2xl md:text-3xl leading-relaxed">
+                        Disponible para festivales internacionales, residencias premium y eventos de autor a nivel global.
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-16 max-w-6xl mx-auto pt-10">
+                    <div class="space-y-8 p-16 glass rounded-[40px] border-b-8 border-b-[#2d4a5e] group hover:bg-[#2d4a5e]/5 transition-all">
+                        <p class="text-[12px] mono text-[#2d4a5e] uppercase tracking-[0.5em] font-black">Booking & Mgmt</p>
+                        <p class="text-5xl font-black uppercase tracking-tighter group-hover:scale-105 transition-transform">Carlos Kobayashi</p>
+                        <div class="h-px w-20 bg-white/10 mx-auto my-4"></div>
+                        <a href="https://wa.me/523323100930" class="inline-block text-white/30 hover:text-white transition-all text-base mono underline decoration-[#2d4a5e] decoration-2 underline-offset-[12px]">WA: +52 33 2310 0930</a>
+                    </div>
+                    <div class="space-y-8 p-16 glass rounded-[40px] border-b-8 border-b-[#cc2b2b] group hover:bg-[#cc2b2b]/5 transition-all">
+                        <p class="text-[12px] mono text-[#cc2b2b] uppercase tracking-[0.5em] font-black">Production</p>
+                        <p class="text-5xl font-black uppercase tracking-tighter group-hover:scale-105 transition-transform">Mister G</p>
+                        <div class="h-px w-20 bg-white/10 mx-auto my-4"></div>
+                        <a href="https://wa.me/523311519056" class="inline-block text-white/30 hover:text-white transition-all text-sm md:text-base mono underline decoration-[#cc2b2b] decoration-2 underline-offset-[12px]">WA: +52 33 1151 9056</a>
+                    </div>
+                </div>
+                
+                <div class="pt-20">
+                    <a href="https://facebook.com/ExitMusicTributeGDL" class="group relative inline-block px-24 py-8 border-2 border-white/5 font-black mono text-[12px] tracking-[1em] uppercase hover:bg-white hover:text-black transition-all">
+                        /EXIT_MUSIC_TRIBUTE
+                        <div class="absolute inset-0 border border-white/20 translate-x-3 translate-y-3 -z-10 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform"></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="py-40 text-center text-[11px] text-white/10 mono tracking-[0.8em] uppercase border-t border-white/5 relative overflow-hidden">
+        <div class="lyric-heavy text-outline text-9xl -bottom-16 left-1/2 -translate-x-1/2 opacity-[0.05] italic">IMMERSE YOUR SOUL IN LOVE</div>
+        Guadalajara 2026 • Exit Music For A Tribute • Universal Sound Experience
+    </footer>
+
+    <script>
+        // Copy to clipboard fallback for non-clickable numbers
+        function copyToClipboard(text) {
+            const el = document.createElement('textarea');
+            el.value = text;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+            console.log('Copied to clipboard: ' + text);
+        }
+    </script>
+</body>
+</html>
